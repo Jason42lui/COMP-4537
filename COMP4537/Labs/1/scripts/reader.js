@@ -11,10 +11,10 @@ function updateDisplayContainer() {
 
     // if the storedArray is not empty and IS an array, then iterate through the object and display it in the display-item-container
     if (storedArray && Array.isArray(storedArray)) { 
-        storedArray.forEach(function(itemObject) {  
+        storedArray.forEach(function(itemValue) {  
             const div = document.createElement('div'); 
             div.classList.add('display-item-container'); 
-            div.textContent = itemObject.value; 
+            div.textContent = itemValue; 
             displayContainer.appendChild(div); 
         });
     }
