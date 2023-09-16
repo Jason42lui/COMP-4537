@@ -13,6 +13,7 @@ const click_string = "click"
 const keyup_string = "keyup"
 const enter_string = "Enter"
 
+let itemList = []
 
 // Object constructor for Note
 function Note() {
@@ -31,14 +32,14 @@ function Note() {
     displayContainer.appendChild(this.container); 
 
 
-    // Remove Method
+    // Notes's Remove Method
     this.remove = function() {
         this.textArea.remove();
         this.removeButton.remove();
         this.removeFromLocalStorage();
     };
 
-    // Remove from Local storage Method
+    // Notes's Remove from Local storage Method
     this.removeFromLocalStorage = function() {
         let itemList = JSON.parse(localStorage.getItem(arraykey_string)) || [];
         itemList.splice(itemList.indexOf(this.textArea.value), 1);
@@ -47,9 +48,7 @@ function Note() {
     };
 }
 
-let itemList = []
-
-// Add Note function
+// Add Note function into the display container
 function addTextArea() {
     let input = document.createElement(input_string);
     input.type = text_string;

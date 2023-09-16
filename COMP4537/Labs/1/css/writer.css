@@ -27,6 +27,10 @@ body {
     display: flex;
 }
 
+.time-container {
+    display: flex;
+}
+
 .back-button-container {
     display: flex;
     position: fixed;
